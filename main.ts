@@ -1,29 +1,25 @@
-// World news in one image, Friday 20 November 2026.
-// Front page: Cyclone Akvan hits Odisha, Russia pounds Kyiv
-// overnight, Asian markets slump, Samsung names a new mobile
-// chief, Sydney terror raids, and Cyclone Xavier tracked.
-// The image is drawn in the style of a printed newspaper front
-// page: masthead, dateline, and six illustrated stories.
-// This program ships the finished front page beside it and writes
-// exactly those bytes to the grader's output folder, every run.
-// It uses only the Node standard library, reads no network, and
-// writes nothing else, so two runs produce identical output.
+// Front page for Friday 20 November 2026: the Kyiv barrage, Cyclone
+// Akvan's landfall, a seventh day of market slides, the Red Sea
+// escalation, the Haiti gang raid, and the Sydney terror raids.
+// The page itself is drawn by frontpage.py and shipped beside this
+// program as entry.png; this program copies those exact bytes to the
+// output directory the grader provides. It touches no network and
+// uses no randomness, so every run writes identical bytes.
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+const LIMIT = 1048576; // 1 MiB, the competition gate
 const here = dirname(fileURLToPath(import.meta.url));
-const source = join(here, "entry.png");
-const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-const target = join(outputDir, "entry.png");
-
-mkdirSync(outputDir, { recursive: true });
-const bytes = readFileSync(source);
-// The competition gate allows at most 1 MiB; fail loudly here
-// rather than submitting a file the gate would refuse.
-if (bytes.length > 1048576) {
-  throw new Error(`entry.png is ${bytes.length} bytes, over the 1 MiB limit`);
+const picture = readFileSync(join(here, "entry.png"));
+if (picture.length > LIMIT) {
+  throw new Error(`entry.png is ${picture.length} bytes, above the ${LIMIT} limit`);
 }
-writeFileSync(target, bytes);
-console.log(`wrote ${target} (${bytes.length} bytes)`);
+const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+mkdirSync(outDir, { recursive: true });
+// The grader reads exactly one file from the output directory, so
+// the name stays entry.png whatever the directory is called.
+const dest = join(outDir, "entry.png");
+writeFileSync(dest, picture);
+console.log(`wrote ${dest} (${picture.length} bytes)`);

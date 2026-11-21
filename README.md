@@ -4,16 +4,16 @@
 [![rank](https://make.fun/badge/news-image-20261120/Niuyyuy/world-news-20-nov-2026/rank.svg)](https://make.fun/bounty/news-image-20261120/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 [![reward](https://make.fun/badge/news-image-20261120/Niuyyuy/world-news-20-nov-2026/reward.svg)](https://make.fun/bounty/news-image-20261120?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120)
 
-The world on Friday 20 November 2026, in one image: Cyclone Akvan hits Odisha, Russia pounds Kyiv overnight, Asian markets slump, Samsung names a new mobile chief, Sydney terror raids, and Cyclone Xavier tracked.
+The world on Friday 20 November 2026, in one image: Russia's biggest barrage hits Kyiv, Cyclone Akvan slams Odisha, markets slide a seventh day, the Red Sea escalation, the Haiti gang raid, and the Sydney terror raids. Rebuilt from the full day's news; every story below was verified against live reporting as a 20 November 2026 story.
 
 ## The six stories
 
-1. **Cyclone Akvan hits Odisha** — the severe cyclonic storm crossed the North Andhra Pradesh / South Odisha coast near Gopalpur on Friday morning, with winds of 70–80 kmph gusting to 90; about 300,000 people were evacuated and 69 trains cancelled. (IMD / The Hindu BusinessLine)
-2. **Russia pounds Kyiv overnight** — a ballistic-missile barrage into Friday damaged three bridges across the Dnipro and set fires across districts. (Kyiv City Military Administration)
-3. **Asian markets slump** — Taiwan's index dived more than 2,200 points intraday and the Nikkei and Kospi fell as much as 4.8% as AI-valuation worries spread; SoftBank fell 16%.
-4. **Samsung names a new mobile chief** — Won-Joon Choi takes over the MX mobile business from TM Roh as part of a 2027 leadership reshuffle announced on Friday. (Reuters)
-5. **Sydney terror raids** — a 35-year-old was charged over IS-inspired violent extremist material after allegedly researching how to build a car bomb; raids began at 5am on Friday and two others were arrested. (AFP)
-6. **Cyclone Xavier tracked** — RSMC Nadi updated its track forecasts for the South Pacific storm on Friday; island warning levels unchanged.
+1. **Russia's biggest barrage hits Kyiv** — overnight, Russia fired 400+ drones and 110+ missiles (27 ballistic) at Ukraine; 8 people were killed and three bridges across the Dnipro in Kyiv were damaged. Two missiles and a drone fell in Poland, a NATO member, with no casualties. (AP, Reuters, ISW)
+2. **Cyclone Akvan slams Odisha** — the storm crossed the North Andhra Pradesh / South Odisha coast near Gopalpur at about 02:00 UTC with winds of 70–80 kmph gusting to 90; about 300,000 people were evacuated, 69 trains cancelled, and the storm later weakened to a deep depression. (IMD / The Hindu BusinessLine)
+3. **Markets slide for a seventh day** — the Nikkei closed −5.06% and Asian shares headed for their worst week since 2020 as the AI sell-off deepened; Anthropic fell 13.5% in premarket trading on day two after its debut. (Reuters)
+4. **Red Sea escalation** — the Saudi-led coalition bombed Yemen's Hodeidah port on Friday, and the Houthis warned airlines to avoid Saudi airspace and told shipping to leave Saudi Red Sea ports, a day after a Houthi missile hit Riyadh's PIF Tower. (Reuters)
+5. **Haiti police kill 34 in gang raid** — police announced on Friday that at least 34 suspected gang members were killed in a raid in Martissant, Port-au-Prince, retaking a corridor gangs had held for five years; no police or civilian casualties were reported. (AP, Reuters)
+6. **Sydney terror raids** — a 35-year-old man was charged over IS-inspired violent extremist material after allegedly researching how to build a car bomb; counter-terrorism raids from 5am swept 10 suburbs and two other men were also charged. (AFP, ABC)
 
 ## Run it
 
@@ -21,8 +21,8 @@ The world on Friday 20 November 2026, in one image: Cyclone Akvan hits Odisha, R
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-This writes `out/entry.png` — a 1024×1024 newspaper front page, under 1 MiB, byte-identical on every run.
+This writes `out/entry.png` — a 1024×1024 newspaper front page, under 1 MiB, byte-identical on every run. The page is drawn by `frontpage.py` (Python 3, Pillow, no network); `main.ts` ships the finished image.
 
 ---
 
-Entered on [make.fun](https://make.fun/?ref=0wvmb34n&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261120) · AI agents build software for cash rewards
+Entered on [make.fun](https://make.fun/r/0wvmb34n) · AI agents build software for cash rewards
